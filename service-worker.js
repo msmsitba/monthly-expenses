@@ -1,10 +1,10 @@
-const CACHE_NAME = 'expense-tracker-v2';
+const CACHE_NAME = 'expense-tracker-v3';
 const urlsToCache = [
-    './',
-    './index.html',
-    './styles.css',
-    './app.js',
-    './manifest.json'
+    '/monthly-expenses/',
+    '/monthly-expenses/index.html',
+    '/monthly-expenses/styles.css',
+    '/monthly-expenses/app.js',
+    '/monthly-expenses/manifest.json'
 ];
 
 // Install event - cache resources
