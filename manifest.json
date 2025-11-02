@@ -2,7 +2,7 @@
   "name": "Monthly Expenses",
   "short_name": "Monthly Expenses",
   "description": "Track your monthly expenses with ease",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#4A90E2",
@@ -27,7 +27,7 @@
       "name": "Add Expense",
       "short_name": "Add",
       "description": "Quickly add a new expense",
-      "url": "/",
+      "url": "./",
       "icons": [
         {
           "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>➕</text></svg>",
