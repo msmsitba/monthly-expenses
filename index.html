@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Monthly Expenses">
+    <meta name="theme-color" content="#4A90E2">
+    <title>Monthly Expenses</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Total -->
+        <header class="header">
+            <h1>Monthly Expenses</h1>
+            <div class="month-selector">
+                <select id="monthSelect" class="month-select">
+                    <!-- Populated by JavaScript -->
+                </select>
+            </div>
+            <div class="total-section">
+                <span class="total-label">Total</span>
+                <span class="total-amount" id="totalAmount">$0.00</span>
+            </div>
+        </header>
+
+        <!-- Add Expense Form -->
+        <div class="add-expense-form">
+            <input
+                type="text"
+                id="itemInput"
+                placeholder="Item name"
+                autocomplete="off"
+            >
+            <div class="form-row">
+                <input
+                    type="number"
+                    id="costInput"
+                    placeholder="Cost"
+                    step="0.01"
+                    min="0"
+                >
+                <select id="categorySelect">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <button id="addBtn" class="btn-primary">Add Expense</button>
+        </div>
+
+        <!-- Expense List -->
+        <div class="expense-list" id="expenseList">
+            <!-- Expenses will be dynamically added here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <p>No expenses yet</p>
+            <p class="empty-state-hint">Add your first expense above</p>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h2>Edit Expense</h2>
+            <input
+                type="text"
+                id="editItemInput"
+                placeholder="Item name"
+            >
+            <input
+                type="number"
+                id="editCostInput"
+                placeholder="Cost"
+                step="0.01"
+                min="0"
+            >
+            <select id="editCategorySelect">
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Bills">Bills</option>
+                <option value="Other">Other</option>
+            </select>
+            <div class="modal-actions">
+                <button id="saveEditBtn" class="btn-primary">Save</button>
+                <button id="cancelEditBtn" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
